@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Portfolio</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header>
+    <div class="navbar">
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="document.querySelector('.navbar nav').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="ali logo2.png" alt="Ali Logo">
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main Section ===== -->
+  <main>
+    <div class="main" id="home">
+      <h1>Hello, I'm Ali</h1>
+      <p class="pa">I'm a web developer</p>
+      <div class="article">
+        <div class="article-content">
+          <div class="profile-pic">
+            <img src="black.jpg" alt="Ali Picture">
+            <h3>Ali Hassan Mazari</h3>
+            <p class="role">Frontend Developer</p>
+          </div>
+          <div class="description-text">
+            <p>
+              I am a passionate front-end web developer dedicated to creating visually appealing and highly functional websites. 
+              I specialize in building responsive and interactive user interfaces that provide seamless experiences across all devices. 
+              My expertise includes HTML, CSS, and JavaScript, and I continually explore modern frameworks and tools to enhance my skills. 
+              I enjoy collaborating with clients to understand their vision and transform ideas into engaging digital experiences. 
+              My approach emphasizes clean, maintainable code and attention to detail, ensuring that every project not only looks great but also performs efficiently. 
+              I am committed to continuous learning, keeping up with the latest web development trends, and delivering solutions that make a real impact.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>Made with love by Ali © 2025 for web development.</p>
+  </footer>
+
+  <!-- ===== JS for Hamburger ===== -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navbar nav');
+
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > 768){
+        nav.classList.remove('active'); // remove active if desktop
+      }
+    });
+  </script>
+</body>
+</html>

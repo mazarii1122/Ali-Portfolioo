@@ -1,0 +1,188 @@
+/* ===== Universal Reset ===== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgb(15, 15, 30);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    border-radius: 6px;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* Fix hover: active class ke color pe affect na kare */
+.navbar nav ul li a:hover {
+    background-color: #2afadf;
+    color: #000;
+}
+
+/* Hamburger */
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+  }
+
+/* ===== About Section ===== */
+.about {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 7rem 1rem 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about h1{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 6px;
+    font-size: 2.2rem;
+    color: #2afadf;
+}
+
+.about .pa {
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #facc15;
+    margin-bottom: 2rem;
+}
+
+/* ===== Article + Certificate Layout ===== */
+.about-article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: rgba(11, 39, 64, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.text-block {
+    flex: 1 1 500px;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.image-block {
+    flex: 0 0 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-block img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+    object-fit: cover;
+}
+
+/* Hover effect */
+.about-article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: rgb(15, 15, 30);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.95rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .about-article {
+        flex-direction: column;
+        padding: 1.8rem;
+        gap: 1.5rem;
+    }
+    .text-block, .image-block { flex: 1 1 100%; }
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .logo { margin-left: auto; }
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        background: rgb(15,15,30);
+        width: 200px;
+        padding: 1rem 0;
+        text-align: center;
+        border-radius: 0 0 8px 8px;
+    }
+    .navbar nav.active { display: block; }
+    .navbar nav ul { flex-direction: column; gap: 0.8rem; }
+
+    .about h1 { font-size: 1.8rem; letter-spacing: 4px; }
+    .about .pa { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+    .about h1 { font-size: 1.5rem; letter-spacing: 3px; }
+    .about .pa { font-size: 12px; }
+    .image-block img { width: 200px; margin: 0 auto; }
+}

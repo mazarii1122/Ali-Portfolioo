@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Portfolio - Skills</title>
+  <link rel="stylesheet" href="skill.css">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header>
+    <div class="navbar">
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="document.querySelector('.navbar nav').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="ali logo2.png" alt="Ali Logo">
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="skill.html" class="active">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Skills Section ===== -->
+  <main>
+    <section id="skills" class="section">
+      <h1 class="section-title">My Skills</h1>
+      <div class="skills-description">
+        <p>
+          I specialize in a variety of technologies and tools that help me create high-quality, responsive, and visually appealing web applications. Each skill listed below demonstrates my commitment to coding excellence and design precision.
+        </p>
+      </div>
+      <div class="skills-container">
+        <div class="skill-box">
+          <img src="html.jpg" alt="HTML">
+          <h3>HTML</h3>
+          <p>Structuring web pages with semantic HTML5 to ensure accessibility and SEO-friendly markup.</p>
+        </div>
+        <div class="skill-box">
+          <img src="css.jpg" alt="CSS">
+          <h3>CSS</h3>
+          <p>Designing responsive layouts, animations, and modern styling with Flexbox, Grid, and transitions.</p>
+        </div>
+        <div class="skill-box">
+          <img src="tailwind.jpg" alt="Tailwind CSS">
+          <h3>Tailwind CSS</h3>
+          <p>Rapidly building modern, responsive designs using utility-first CSS framework.</p>
+        </div>
+        <div class="skill-box">
+          <img src="java.jpg" alt="JavaScript">
+          <h3>JavaScript</h3>
+          <p>Adding interactivity, DOM manipulation, and dynamic functionality to web pages.</p>
+        </div>
+        <div class="skill-box">
+          <img src="react.png" alt="React">
+          <h3>React JS</h3>
+          <p>Building reusable components, state management, and interactive single-page applications using frameworks like React.</p>
+          </div>
+          <div class="skill-box">
+            <img src="vue.png" alt="vue">
+            <h3>vue JS</h3>
+            <p>Building reusable components, state management, and interactive single-page applications using frameworks like React.</p>
+        </div>
+        <div class="skill-box">
+          <img src="github.png" alt="GitHub">
+          <h3>GitHub</h3>
+          <p>Version control, collaboration, and project management using Git and GitHub repositories.</p>
+        </div>
+        <div class="skill-box">
+            <img src="git.png" alt="GitHub">
+            <h3>Git</h3>
+            <p>Version control, collaboration, and project management using Git and GitHub repositories.</p>
+          </div>
+        <div class="skill-box">
+          <img src="figma.png" alt="Figma">
+          <h3>Figma</h3>
+          <p>Creating UI/UX designs, wireframes, and prototypes to visualize user experiences.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>Made with love by Ali © 2025 for web development.</p>
+  </footer>
+
+  <!-- ===== JS for Hamburger ===== -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navbar nav');
+
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > 768){
+        nav.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

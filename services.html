@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Portfolio - Services</title>
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header>
+    <div class="navbar">
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="document.querySelector('.navbar nav').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="ali logo2.png" alt="Ali Logo">
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Services Section ===== -->
+  <main>
+    <section id="services" class="section">
+      <h1 class="section-title">My Services</h1>
+      <div class="services-description">
+        <p>
+          I provide high-quality front-end development services for businesses, startups, and personal projects. 
+          Every project is carefully crafted with attention to detail, performance, and user experience in mind. 
+          My goal is to make your digital presence visually appealing, interactive, and fully responsive across all devices.
+        </p>
+      </div>
+      <div class="services-container">
+        <div class="service-box">
+          <img src="web.jpg" alt="Website Development">
+          <h3>Website Development</h3>
+          <p>Building responsive, modern websites using HTML, CSS, and JavaScript with clean and maintainable code.</p>
+        </div>
+        <div class="service-box">
+          <img src="ui.jpg" alt="UI/UX Implementation">
+          <h3>UI/UX Implementation</h3>
+          <p>Transforming design concepts into interactive, functional, and user-friendly web pages.</p>
+        </div>
+        <div class="service-box">
+          <img src="landing.jpg" alt="Landing Pages">
+          <h3>Landing Pages</h3>
+          <p>Optimized, visually appealing landing pages for products, startups, and businesses.</p>
+        </div>
+        <div class="service-box">
+          <img src="ani.jpg" alt="Web Animations & Interactivity">
+          <h3>Web Animations & Interactivity</h3>
+          <p>Adding smooth animations, hover effects, sliders, and modal interactions to enhance user experience.</p>
+        </div>
+        <div class="service-box">
+          <img src="opt.jpg" alt="Website Optimization">
+          <h3>Website Optimization</h3>
+          <p>Fast-loading, SEO-friendly, and cross-browser compatible websites using modern practices.</p>
+        </div>
+        <div class="service-box">
+          <img src="front.jpg" alt="Frontend Consultation">
+          <h3>Frontend Consultation</h3>
+          <p>Advising on UI/UX improvements, layout decisions, and interactive feature implementations.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>Made with love by Ali © 2025 for web development.</p>
+  </footer>
+
+  <!-- ===== JS for Hamburger ===== -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navbar nav');
+
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > 768){
+        nav.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

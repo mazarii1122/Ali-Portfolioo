@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Portfolio - Contact</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header>
+    <div class="navbar">
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="document.querySelector('.navbar nav').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="ali logo2.png" alt="Ali Logo">
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Contact Section ===== -->
+  <main>
+    <section id="contact" class="section">
+      <h1 class="section-title">Contact Me</h1>
+      <div class="contact-description">
+        <p>
+          You can reach me using the contact information below, or send me a message using the form.
+        </p>
+      </div>
+
+      <!-- ===== Contact Row ===== -->
+      <div class="contact-row">
+        <!-- Left: Image -->
+        <!-- <div class="contact-image">
+          <img src="dark.jpg" alt="Contact Image">
+        </div> -->
+
+        <!-- Right: Contact Content -->
+        <div class="contact-content">
+          <h2>Contact Info</h2>
+
+          <div class="contact-details">
+            <p><strong>Email:</strong> alihaidermazari818@gmail.com</p>
+            <p><strong>Phone:</strong> +92-3702156523</p>
+            <p><strong>Address:</strong> Esquire Mall, Zamzama, Clifton, DHA Phase VI Karachi</p>
+            <p><strong>LinkedIn:</strong> 
+              <a href="https://www.linkedin.com/in/ali-hassan-mazari-820480335" target="_blank">ALI HASSAN MAZARI</a>
+            </p>
+            <p><strong>GitHub:</strong> 
+              <a href="https://github.com/ali.dev" target="_blank">ali.dev</a>
+            </p>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <input type="text" id="name" name="name" required placeholder="Full Name">
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
+            <textarea id="message" name="message" rows="5" placeholder="Message..." required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>Made with love by Ali © 2025 for web development.</p>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script>
+    // Hamburger Menu
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navbar nav');
+
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > 768){
+        nav.classList.remove('active');
+      }
+    });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      contactForm.reset();
+      document.getElementById('name').value = "Ali Hassan";
+    });
+  </script>
+</body>
+</html>

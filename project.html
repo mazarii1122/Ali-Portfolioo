@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Portfolio - Projects</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header>
+    <div class="navbar">
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="document.querySelector('.navbar nav').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="ali logo2.png" alt="Ali Logo">
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main Section ===== -->
+  <main>
+    <section class="projects" id="projects">
+      <h1>My Projects</h1>
+      <p class="projects-desc">
+        Here are some of the key projects I've built as a front-end web developer. 
+        Each project showcases my skills in HTML, CSS, JavaScript, and responsive design, 
+        with a focus on clean UI, interactivity, and real-world functionality.
+      </p>
+
+      <div class="project-container">
+
+        <!-- Netflix Clone -->
+        <div class="project-card">
+          <img src="/net.jpg" alt="Netflix Clone Screenshot">
+          <h2>Netflix Clone</h2>
+          <p>
+            A responsive Netflix-inspired UI that mimics the look and feel of the original platform. 
+            Includes interactive movie cards, smooth transitions, and modern layout using HTML, CSS, and JavaScript.
+          </p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <!-- To-Do List -->
+        <div class="project-card">
+          <img src="/todo.jpg" alt="To-Do List Screenshot">
+          <h2>To-Do List</h2>
+          <p>
+            A task management app that lets users add, delete, and mark tasks as complete. 
+            Designed for simplicity and usability, built with vanilla JavaScript, HTML, and CSS.
+          </p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <!-- Weather App -->
+        <div class="project-card">
+          <img src="/weather.jpg" alt="Weather App Screenshot">
+          <h2>Weather App</h2>
+          <p>
+            A real-time weather application that fetches data from OpenWeatherMap API. 
+            Displays temperature, weather conditions, and location with a clean responsive design.
+          </p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <!-- E-commerce Website -->
+        <div class="project-card">
+          <img src="/ecommerce.jpg" alt="E-commerce Website Screenshot">
+          <h2>E-commerce Website</h2>
+          <p>
+            A fully responsive online shop interface with product listings, cart functionality, 
+            and modern UI components. Built with HTML, CSS, and JavaScript.
+          </p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>Made with love by Ali © 2025 for web development.</p>
+  </footer>
+
+  <!-- ===== JS for Hamburger ===== -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navbar nav');
+
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > 768){
+        nav.classList.remove('active'); // remove active if desktop
+      }
+    });
+  </script>
+</body>
+</html>
