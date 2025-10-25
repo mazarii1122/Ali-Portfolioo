@@ -160,20 +160,21 @@ footer {
 }
 
 /* ===== Responsive ===== */
-@media(max-width:860px){
+@media(max-width:900px){
     .contact-row {
         flex-direction: column;
     }
     .contact-image, .contact-content {
-        width: 70%;
+        width: 100%;
     }
 }
 
-@media(max-width:768px){
+@media(max-width:568px){
     .hamburger{display:flex;}
     .navbar nav{display:none;position:absolute;top:65px;left:0;width:200px;background:rgb(15,15,30);padding:1rem 0;text-align:center;}
     .navbar nav.active{display:block;}
     .navbar nav ul{flex-direction:column;gap:0.8rem;}
 }
+
 
 
