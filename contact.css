@@ -176,7 +176,7 @@ footer {
     .navbar nav ul{flex-direction:column;gap:0.8rem;}
 }
 /* Fix contact section width on small devices */
-@media(max-width:600px){
+@media(max-width:400px){
     .contact-row {
         width: 90%;
         padding: 1rem;
@@ -207,6 +207,7 @@ footer {
         width: 100%;
     }
 }
+
 
 
 
